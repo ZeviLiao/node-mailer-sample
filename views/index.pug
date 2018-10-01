@@ -4,9 +4,9 @@ block content
   h1= title
   p Welcome to #{title}
 
-  label(for="")
-  input(type="text", name="toAddrs", placeholder="receiver email")
-  br
-  textarea(name="mailBody", cols="30", rows="10", placeholder="mail content")
-  br
-  button send mail
+  form(action="/sendmail", , method='POST')
+    input(type="text", name="toAddrs", placeholder="receiver email")
+    br
+    textarea(name="mailBody", cols="30", rows="10", placeholder="mail content")
+    br
+    input(type="submit", value="send mail")
